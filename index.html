@@ -12,9 +12,80 @@
 
 <!-- HOTELS -->
 <div id="hotels">
-    <h1>Hôtels à Delémont</h1>
-
     <!-- FORMULAIRE DE RESERVATION -->
+    <h1>Hôtels à Delémont</h1>
+    <form action="">
+        <ul>
+            <li>
+                <label for="liste">Hotêl</label>
+                <select name="lis_hotel" id="liste">
+                    <option value="0" selected>--Sélectionnez un hôtel--</option>
+                    <option value="City">Hotêl City</option>
+                    <option value="National">Hotêl National</option>
+                    <option value="Midi">Hotêl Le Midi</option>
+                    <option value="Victoria">Hotêl Victoria</option>
+                </select>
+            </li>
+            <li>
+                <label for="nbrChambre">Nombre de chambres : </label>
+                <input type="text" id="nbrChambre" maxlength="2">
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Type de chambre</legend>
+                    <div>
+                        <input type="radio" name="typeChambre">
+                        <span>Standard simple</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="typeChambre">
+                        <span>Standard double</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="typeChambre">
+                        <span>Supérieure simple</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="typeChambre">
+                        <span>Supérieure double</span>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Options disponibles</legend>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>Petit déjeuner</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>TV</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>Journaux</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>Ordinateur</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>Accès Wifi</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="optionsChambre">
+                        <span>Animaux de compagnie</span>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <button type="reset">Effacer</button>
+                <button type="submit">Réserver</button>
+            </li>
+        </ul>
+    </form>
     <!-- au cas ou t'aurais pas compris place ton fromulaire ici. A+ Manfred -->
 </div>
 

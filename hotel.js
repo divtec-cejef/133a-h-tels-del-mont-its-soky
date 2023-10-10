@@ -1,5 +1,5 @@
 ﻿/**
-* @author      Steve Fallet <steve.fallet@divtec.ch>
+* @author      Steve Fallet <steve.fallet@tec.ch>
 * @version     1.0
 * @since       2023-10-09
 *
