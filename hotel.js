@@ -102,7 +102,6 @@ function getOptions() {
  */
 function valideSaisie() {
     erreur.innerHTML = "<ul>";
-
     if (getHotel() === "0") {
         erreur.innerHTML += "<li>Choisissez un hotel</li>";
     } else if (isNaN(getNbChambre())) {
@@ -110,13 +109,10 @@ function valideSaisie() {
     } else if (getChambre() === "0") {
         erreur.innerHTML += "<li>Sélectionnez un type de chambre !</li>";
     }
-
     erreur.innerHTML += "</ul>";
 
     if (erreur.innerHTML === "<ul></ul>") {
         return "";
-    } else {
-        return erreur.innerHTML;
     }
 }
 
@@ -154,11 +150,8 @@ function afficheConfirmation() {
     nbrChambre.innerText = getNbChambre().toString();
     typeChambre.innerText = getChambre();
 
-    // //liste d'options
-    // for (let k = 0; k < getOptions().length; k++) {
-    //     let element = getOptions().at(k);
-    //     options.innerHTML = <li></li>
-    // }
+    //liste d'options
+
 
     reservation.display = "block";
 }
@@ -169,7 +162,7 @@ function afficheConfirmation() {
  * @param event Objet représentant l'événement
  */
 function reserver(event) {
-    event.preventDefault();
+   event.preventDefault();
 
     //cache le message d'erreur
     erreur.display = "none";
@@ -180,11 +173,13 @@ function reserver(event) {
     } else {
         afficheConfirmation();
     }
-    console.log("fer");
 }
 
-forms.addEventListener("submit", reserver());
-
+//se lance à chaque fois que le form est envoyé
+forms.addEventListener("submit", reserver);
 forms.addEventListener("reset", function reset (event) {
     event.preventDefault();
+
+    hotelChoisi.value = "0";
+    nbrChambre.innerText =  "";
 });
